@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/owfont-regular.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Momentum</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="musik">
+                <div class="musik__container">
+                    <div class="time">
+                        <div class="current">0:00</div>
+                        <div class="divider">/</div>
+                        <div class="length">0:00</div>
+                      </div>
+                    <div class="musik__buttons">
+                        <audio src="" ></audio>
+                        <div class="button__last"></div>
+                        <div class="button__play">
+                            <button class=" btn__last">
+                                <!-- <img src="./assets/svg/play-prev.svg" alt="last"> -->
+                            </button>
+                            <button class=" btn__status btn__play">
+                                <!-- <img src="./assets/svg/play.svg" alt="play"> -->
+                            </button>
+                            <button class="btn__next">
+                                <!-- <img src="./assets/svg/play-next.svg" alt="next"> -->
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="progress"></div>
+                      </div>
+                      
+                    <div class="musik__list">
+                        <ul class="play__list">
+
+
+                            <!-- <li class="play-item">Aqua Caelestis</li>
+                        </ul>
+                        <ul class="play-list">
+                            <li class="play-item">River Flows In You</li>
+                        </ul>
+                        <ul class="list">
+                            <li class="link">Aqua Caelestis</li>
+                            <li class="link">River Flows in you</li>
+                            <li class="link">Summer Wind</li>
+                            <li class="link">Ennio Morricone</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="weather">
+                <input type="text" class="city" value="Киев" >
+                <div class="weather__container">
+                    <i class="weather-icon owf"></i>
+                    <div class="temperature"></div>
+                    <div class="weather-description"></div>
+                    <div class="humidity"></div>
+                    <div class="wind"></div>
+
+                    <!-- <div class="weather__input">
+
+                    </div>
+                    <div class="weather__logo">
+
+                    </div>
+                    <div class="weather__status">
+
+                    </div> -->
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="last__bcg">
+                <img src="./assets/svg/slider-prev.svg" alt="last">
+            </div>
+            <div class="next__bcg">
+                <img src="./assets/svg/slider-next.svg" alt="next">
+            </div>
+            <div class="time">
+                <div class="time__container">
+                    <div class="time__oclock">
+
+                    </div>
+                    <div class="time__date">
+
+                    </div>
+                </div>
+            </div>
+            <div class="greeting">
+                <div class="greeting__text">
+                </div>
+                <input type="text" class="greeting__input" placeholder="[Enter name]">
+
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="quote">
+                <div class="qoute__container">
+                    <div class="qoute__button">
+    <!-- <img src="./assets/svg/reload.svg" alt=""> -->
+
+                    </div>
+                    <div class="quote__text">
+                    </div>
+                    <div class="quote__author"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script type="module" src="./index.js"></script>
+
+</html>
