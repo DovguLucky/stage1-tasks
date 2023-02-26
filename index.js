@@ -175,18 +175,6 @@ qouteBtn.addEventListener('click', function () {
 // ___________________Player
 
 
-// const playList = [
-//     {      
-//       title: 'Aqua Caelestis',
-//       src: '../assets/sounds/Aqua Caelestis.mp3',
-//       duration: '00:58'
-//     },  
-//     {      
-//       title: 'River Flows In You',
-//       src: '../assets/sounds/River Flows In You.mp3',
-//       duration: '03:50'
-//     }
-//   ]
 
 
 let isStatusAudio = false;
@@ -211,6 +199,8 @@ function playAudio() {
     audio.play();
     // console.log(playList[numTreck].duration)
     document.querySelector(".length").textContent = `${playList[numTreck].duration}`;
+    audio.volume = .75;
+
 
 
 }
@@ -260,34 +250,6 @@ last.addEventListener('click', function (el) {
 })
 // +++++++++++++++++++++++++++++++++
 
-console.dir(audio);
-
-// audio.addEventListener(
-//   "loadeddata",
-//   () => {
-//     // document.querySelector(".length").textContent = playList[numTreck].duration;
-//     // getTimeCodeFromNum(
-
-//         // audio.duration
-//     // );
-//     audio.volume = .75;
-//   },
-//   false
-// );
-const current = document.querySelector('.current');
-// current.textContent =  init()
-setTimeout(() => {
-    current.textContent = 11111
-}, 1000);
-
-
-const timeline = audioPlayer.querySelector(".timeline");
-timeline.addEventListener("click", e => {
-    const timelineWidth = window.getComputedStyle(timeline).width;
-    const timeToSeek = e.offsetX / parseInt(timelineWidth) * audio.duration;
-    audio.currentTime = timeToSeek;
-}, false);
-
 
 function getTimeCodeFromNum(num) {
     let seconds = parseInt(num);
@@ -303,65 +265,14 @@ function getTimeCodeFromNum(num) {
 }
 
 
-// btnStatus.addEventListener('click', pauseAudio )
-// const audio = new Audio();
-
-// // play.addEventListener('click', audioPlayPause)
-// play.addEventListener('click', function () {
-
-//     audio.currentTime = 0;
-//     if(!isStatusAudio) {
-//         console.log(1111111)
-//         // playAudio()
-//     } else if(isStatusAudio)(
-//         console.log(2222222)
-//         // pauseAudio()
-//     )
-// })
 
 
 
-// function audioPlayPause() {
-//     // audio.src =
-//     // url(/assets/sounds/Caelestis.mp3)
-//     audio.currentTime = 0;
-//     if(!isPlay){
-//         console.log(1111111)
-//         playAudio()
-//     } else if (isPlay)(
-//         console.log(2222222)
-//         pauseAudio()
-//     )
-
-//   audio.play();
-// }
-
-
-// ____________________________________Image__API
-
-
-// https://api.unsplash.com/photos/random?orientation=landscape&query=nature&client_id=GFulx5Nsu9TKmLHWOFnWVa20ESBIiXDfBg0JPQ-Z8yQ
-// function getLinkToImage() {
-//     const url = 'https://api.unsplash.com/photos/random?orientation=landscape&query=nature&client_id=GFulx5Nsu9TKmLHWOFnWVa20ESBIiXDfBg0JPQ-Z8yQ';
-//     fetch(url)
-//       .then(res => res.json())
-//       .then(data => {
-//         console.log(data.urls.regular)
-//       });
-//     }
-
-// https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=30c312a66319bdb1e9d8f52682ead968&tags=nature&extras=url_h&format=json&nojsoncallback=1
-
-
-    // async function getLinkToImage() {
-    //     const url = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=30c312a66319bdb1e9d8f52682ead968&tags=nature&extras=url_l&format=json&nojsoncallback=1';
-    //     // const url = 'https://api.unsplash.com/photos/random?orientation=landscape&query=nature&client_id=GFulx5Nsu9TKmLHWOFnWVa20ESBIiXDfBg0JPQ-Z8yQ';
-    //     const res = await fetch(url);
-    //     const data = await res.json();
-    //     console.log(data.urls.regular)
-    //    }
-    //    getLinkToImage()
-//     //    ______________________________Translate_________
-
-// // 10 8 7 6 
+const volumeSlider = document.querySelector(".volume-slider");
+volumeSlider.addEventListener('click', e => {
+  const sliderWidth = window.getComputedStyle(volumeSlider).width;
+  const newVolume = e.offsetX / parseInt(sliderWidth);
+  audio.volume = newVolume;
+  document.querySelector(".volume-percentage").style.width = newVolume * 100 + '%';
+}, false)
 

@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/owfont-regular.css">
     <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="https://icono-49d6.kxcdn.com/icono.min.css">
     <title>Momentum</title>
 </head>
 
@@ -15,36 +17,48 @@
         <header class="header">
             <div class="musik">
                 <div class="musik__container">
-                    <div class="time">
-                        <div class="current">0:00</div>
-                        <div class="divider">/</div>
-                        <div class="length">0:00</div>
-                      </div>
-                    <div class="musik__buttons">
-                        <audio src="" ></audio>
-                        <div class="button__last"></div>
-                        <div class="button__play">
-                            <button class=" btn__last">
-                                <!-- <img src="./assets/svg/play-prev.svg" alt="last"> -->
-                            </button>
-                            <button class=" btn__status btn__play">
-                                <!-- <img src="./assets/svg/play.svg" alt="play"> -->
-                            </button>
-                            <button class="btn__next">
-                                <!-- <img src="./assets/svg/play-next.svg" alt="next"> -->
-                            </button>
+                    <div class="musik__active">
+                        <div class="time">
+                            <div class="current">0:00</div>
+                            <div class="divider">/</div>
+                            <div class="length">0:00</div>
                         </div>
-                    </div>
 
-                    <div class="timeline">
-                        <div class="progress"></div>
-                      </div>
-                      
-                    <div class="musik__list">
-                        <ul class="play__list">
+                        <div class="volume-container">
+                            <div class="volume-button">
+                                <div class="volume icono-volumeMedium"></div>
+                            </div>
 
 
-                            <!-- <li class="play-item">Aqua Caelestis</li>
+                            <div class="volume-slider">
+                                <div class="volume-percentage"></div>
+                            </div>
+                        </div>
+                        <div class="musik__buttons">
+                            <audio src=""></audio>
+                            <div class="button__last"></div>
+                            <div class="button__play">
+                                <button class=" btn__last">
+                                    <!-- <img src="./assets/svg/play-prev.svg" alt="last"> -->
+                                </button>
+                                <button class=" btn__status btn__play">
+                                    <!-- <img src="./assets/svg/play.svg" alt="play"> -->
+                                </button>
+                                <button class="btn__next">
+                                    <!-- <img src="./assets/svg/play-next.svg" alt="next"> -->
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="progress"></div>
+                        </div>
+
+                        <div class="musik__list">
+                            <ul class="play__list">
+
+
+                                <!-- <li class="play-item">Aqua Caelestis</li>
                         </ul>
                         <ul class="play-list">
                             <li class="play-item">River Flows In You</li>
@@ -54,20 +68,20 @@
                             <li class="link">River Flows in you</li>
                             <li class="link">Summer Wind</li>
                             <li class="link">Ennio Morricone</li> -->
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="weather">
-                <input type="text" class="city" value="Киев" >
-                <div class="weather__container">
-                    <i class="weather-icon owf"></i>
-                    <div class="temperature"></div>
-                    <div class="weather-description"></div>
-                    <div class="humidity"></div>
-                    <div class="wind"></div>
+                <div class="weather">
+                    <input type="text" class="city" value="Киев">
+                    <div class="weather__container">
+                        <i class="weather-icon owf"></i>
+                        <div class="temperature"></div>
+                        <div class="weather-description"></div>
+                        <div class="humidity"></div>
+                        <div class="wind"></div>
 
-                    <!-- <div class="weather__input">
+                        <!-- <div class="weather__input">
 
                     </div>
                     <div class="weather__logo">
@@ -76,8 +90,8 @@
                     <div class="weather__status">
 
                     </div> -->
+                    </div>
                 </div>
-            </div>
         </header>
         <main class="main">
             <div class="last__bcg">
@@ -107,7 +121,7 @@
             <div class="quote">
                 <div class="qoute__container">
                     <div class="qoute__button">
-    <!-- <img src="./assets/svg/reload.svg" alt=""> -->
+                        <!-- <img src="./assets/svg/reload.svg" alt=""> -->
 
                     </div>
                     <div class="quote__text">
