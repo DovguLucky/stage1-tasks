@@ -126,9 +126,12 @@ const weatherDescription = document.querySelector('.weather-description');
 
 const city = document.querySelector('.city')
 
+getWeather()
+city.addEventListener('change', getWeather)
 
 async function getWeather() {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&appid=08f2a575dda978b9c539199e54df03b0&units=metric`;
+    console.log(city.value)
     const res = await fetch(url);
     const data = await res.json();
 
@@ -139,8 +142,8 @@ async function getWeather() {
     humidity.textContent = `Humidity: ${data.main.humidity}%`;
     wind.textContent = `Wind speed: ${data.wind.speed} m/s`;
 }
-console.log(getWeather())
-getWeather()
+
+// console.log(getWeather())
 // _____________________________________________________-
 const qouteText = document.querySelector('.quote__text')
 const qouteAuthor = document.querySelector('.quote__author')
