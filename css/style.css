@@ -1,5 +1,4 @@
 html {
-  /* background-color: palevioletred; */
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   background-size: cover;
@@ -7,8 +6,6 @@ html {
 
 body {
   height: 100%;
-  /* background: url(/assets/img/bg.jpg) ; */
-  /* background-size: cover; */
   transition: all linear 1s;
 }
 
@@ -63,7 +60,7 @@ body {
   width: 100%;
   position: relative;
   cursor: pointer;
-  box-shadow: 0 2px 10px 0 #0008;
+  box-shadow: 0 2px 10px 0 #000;
 }
 
 .progress {
@@ -90,8 +87,7 @@ body {
   height: 100px;
   width: 100px;
   display: flex;
-  /* align-items: center;
-  justify-content: end; */
+
 }
 
 .volume-container .volume-button .volume {
@@ -99,9 +95,7 @@ body {
 }
 
 .volume-container .volume-slider {
-  /* position: absolute; */
-  /* left: -3px; */
-  /* top: 15px; */
+
   z-index: -1;
   width: 0;
   height: 15px;
@@ -210,9 +204,6 @@ body {
   position: absolute;
   left: 0;
   top: 50%;
-  /* height: 100%;
-  width: 100%; */
-  /* background: url(/assets/svg/slider-prev.svg) no-repeat; */
 }
 
 .next__bcg {
@@ -220,10 +211,6 @@ body {
   position: absolute;
   right: 0;
   top: 50%;
-  /* height: 100%;
-  width: 100%;
-  background: url(/assets/svg/slider-next.svg) no-repeat; */
-
 }
 
 .time {
@@ -267,9 +254,7 @@ body {
 }
 
 .greeting__input {
-  /* flex: 0 1 100px; */
   width: 400px;
-  /* display: inline-block; */
   margin-left: 15px;
   background: transparent;
   border: none;
